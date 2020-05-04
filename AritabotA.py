@@ -37,10 +37,10 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.broadcast(TextSendMessage(text='Hello World!'))
-    #line_bot_api.reply_message(
-        #event.reply_token,
-        #TextSendMessage(text=event.message.text))
+    #line_bot_api.broadcast(TextSendMessage(text='Hello World!'))
+    line_bot_api.reply_message(
+        event.reply_token,
+        TextSendMessage(text='Hello AritaBot'))
 
 
 if __name__ == "__main__":
